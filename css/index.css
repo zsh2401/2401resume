@@ -1,0 +1,11 @@
+body{
+    background: black;
+    color: white;
+}
+.area
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    background: transparent;
+}
