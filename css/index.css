@@ -6,16 +6,23 @@ body{
     margin: 0px;
     color: gray;
 }
-.userName{
+.prefix{
     color: greenyellow;
 }
-.inputArea{
+.inputing{
     color: white;
+}
+.partion{
+    margin: 0;
+    color: white;
+}
+#cursor{
+    color: whitesmoke;
 }
 .area
 {
     margin-left: auto;
     margin-right: auto;
-    width: 800px;
+    width: 70%;
     background: transparent;
 }

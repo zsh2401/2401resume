@@ -1,11 +1,9 @@
+var _indexofstep = 8;
+function nextStep(){
+     eval("step" + _indexofstep + "()");
+     _indexofstep++;
+}
 function step1(){
-    // sysemu_writeLine("ok");
-    // sysemu_inputCommand("ls -l",function(){
-    //     sysemu_writeLine("There are 7 file(s)");
-    //     sysemu_writeLine("#Filename\t#Size\t#Per");
-    //     sysemu_writeLine("test.txt\t20KB\t0777");
-    // });
-    // guiemu_set("wwww");
     sysemu_writeLineWithInterval([
         "<span style='color:orange'>Homo OS(TM)</span> is launching now...",
         "Checking disk status",
@@ -14,9 +12,9 @@ function step1(){
         "15MB used/ 128GB total",
         "Ram Status: <span style='color:green'>[OK]</span>",
         "---------------------------------",
-    ],gotoCheckOtherSystem);
+    ],nextStep);
 }
-function gotoCheckOtherSystem(){
+function step2(){
     setTimeout(function(){
         sysemu_writeLineWithInterval(
             [        "Checking other hardware system",
@@ -28,26 +26,26 @@ function gotoCheckOtherSystem(){
             "Trump: <span style='color:red'>[DEAD]</span>",
             "All International Friends: <span style='color:lightgreen'>[GOOD]</span>",
             "---------------------------------"]
-        ,gotoInitChineseSystem);
-        
+        ,nextStep);
     },1000);
 }
-function gotoInitChineseSystem(){
+function step3(){
     setTimeout(function(){
         sysemu_writeLineWithInterval([
             "Initing Chinese Envoirment...",
             "初始化中文系统: <span style='color:lightgreen'>[OK]</span>",
             "----------------------------",
-        ],gotoDisplayInformation);
+        ],nextStep);
     },2000);
 }
-function gotoDisplayInformation(){
+function step4(){
     sysemu_writeLine("您好,欢迎来到鸿蒙OS™")
-        sysemu_writeLine("现在是" + new Date());
-        sysemu_writeLine("您的权限为<span style='color:green'>-User(Group1)-</span>");
-        gotoLS();
+    sysemu_writeLine("现在是" + new Date());
+    sysemu_writeLine("您的权限为<span style='color:green'>-User(Group1)-</span>");
+    sysemu_finish();
+    timer_after1Sec(nextStep);
 }
-function gotoLS()
+function step5()
 {
     setTimeout(function(){
         sysemu_inputCommand("ls",function(){
@@ -62,30 +60,34 @@ function gotoLS()
             sysemu_writeLine("test.txt");
             sysemu_writeLine("wow.png");
             sysemu_writeLine("流浪地球法案.pdf");
-            gotoCat();
+            sysemu_finish();
+            nextStep();
         });
     },1000);
 }
-function gotoCat(){
+function step6(){
     setTimeout(function(){
         sysemu_inputCommand("cat test.txt",function(){
             sysemu_writeLine("HELLO WORLD!");
-            gotoViewPng();
+            sysemu_finish();
+            nextStep();
         });
     },2000);
 }
-function gotoViewPng(){
+function step7(){
     setTimeout(function(){
         sysemu_inputCommand("view wow.png",function(){
             sysemu_writeLine("<span style='color:red'>警告</span> 图形界面未启动,无法浏览:");
             sysemu_writeLine("wow.png");
             sysemu_writeLine("通过<span style='color:green'>lgui launch</span>启动分割式图形界面");
+            sysemu_finish();
             setTimeout(()=>{
                 sysemu_inputCommand("gui launch",function(){
                     sysemu_writeLine("不支持完整gui模式,请尝试<span style='color:green'>lgui launch</span>");
+                    sysemu_finish();
                     setTimeout(()=>{
                         sysemu_inputCommand("lgui launch",function(){
-                            gotoLaunchingGUI();
+                            nextStep();
                         }) 
                     },1000);
                 });
@@ -93,6 +95,20 @@ function gotoViewPng(){
         });
     },2000);
 }
-function gotoLaunchingGUI(){
-    guiemu_launch();
+function step8(){
+    guiemu_launch(nextStep);
+}
+function step9(){
+    sysemu_inputCommand("resume head wow.png",function(){
+        $("#head").html("<img src='https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=1999813445,981034292&fm=58&bpow=404&bpoh=600'>");
+        sysemu_finish();
+        nextStep();
+    });
+}
+function step10(){
+    sysemu_inputCommand("resume simple info:zsh2401",function(){
+        var dom = guiemu_getGUIDom();
+        var t = $(dom);
+        sysemu_finish();
+    });
 }

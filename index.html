@@ -4,24 +4,34 @@
         <link rel="stylesheet" href="lib/highlight/styles/a11y-dark.css">
         <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/gui.css">
         <script src="lib/jquery/js/jquery-3.3.1.min.js"></script>
         <script src="lib/highlight/highlight.pack.js"></script>
         <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-        <script src="js/index.js"></script>
+        <script src="lib/vue/js/vue.min.js"></script>
         <script src="js/cursor.js"></script>
         <script src="js/onebyone.js"></script>
         <script src="js/sysemu.js"></script>
         <script src="js/guiemu.js"></script>
         <script src="js/step.js"></script>
+        <script src="js/timer.js"></script>
+        <script src="js/index.js"></script>
     </head>
     <body>
-        <div class="area">
-            <div id="guiArea"></div>
-            <div id="textOutputArea"></div>
-            <div>
-                <span id="userName" class="userName">zsh2401@/users/zsh2401/$</span>
-                <span id="inputArea" class="inputArea"></span>
-                <span id="cursor"></span>
+        <div class="row area">
+            <div id="guiHTML" style="display: none" class="col-md-6">
+                <div class="row">
+                    <div id="head" class="col-md-6">
+                        <img src="https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=1999813445,981034292&fm=58&bpow=404&bpoh=600">
+                    </div>
+                    <div class="col-md-6">
+                         
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" id="vueapp" >
+                <span class="partion" v-for="output in outputs" v-html="output"></span>
+                <span id="cursor"></span>      
             </div>
         </div>
 

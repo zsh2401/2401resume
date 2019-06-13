@@ -1,3 +1,9 @@
+/*
+cursor.js
+实现指针效果
+@zsh2401
+Jun 13,2019
+*/
 var __INTERVAL = 500;
 var __cursors = [];
 function cursor_init(){

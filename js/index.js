@@ -1,28 +1,45 @@
-var inputArea = null;
-var outputArea = null;
-var guiArea = null;
+/*
+cursor.js
+提供与index主页控件直接相关的js方法以及引导等
+@zsh2401
+Jun 14,2019
+*/
+var vm = null;
 function init(){
-    inputArea = document.getElementById("inputArea");
-    outputArea = document.getElementById("textOutputArea");
-    guiArea = document.getElementById("guiArea");
     hljs.initHighlightingOnLoad();
     cursor_init();
-    sysemu_init(outputArea,inputArea);
-    guiemu_init(guiArea);
-}
-function after1Sec(callback){
-    setTimeout(callback,1000);
-}
-function after2Sec(callback){
-    setTimeout(callback,2000);
-}
-function afterHalfSec(callback){
-    setTimeout(callback,500);
+    initVue();
 }
 function start(){
     cursor_enable(document.getElementById("cursor"));
-    step1();
-    // gotoLaunchingGUI();
+    nextStep();
+}
+function initVue(){
+    vm = new Vue({
+        el:"#vueapp",
+        data:{
+            outputs:[],
+        }
+    });
+}
+function nextOutputPartion(){
+    var index = vm.$data.outputs.length;
+    return index;
+}
+function setOutputPartion(index,html){
+    vm.$set(vm.$data.outputs,index,html);
+}
+function readOutputPartion(index){
+    return vm.$data.outputs[index];
+}
+function clearPartion(){
+    vm.$data.outputs = [];
+}
+function setGUI(html){
+    $("#guiHTML").html(html);
+}
+function guiLayout(){
+    $("#guiHTML").show();
 }
 function highlightAllCode(){
     var codeBlocks = document.getElementsByTagName("code");
@@ -33,7 +50,6 @@ function highlightAllCode(){
 function drawHighlight(domEle){
     hljs.highlightBlock(domEle);
 }
-function __executeCurrentLine(){}
 window.onload = ()=>{
     init();
     start();
