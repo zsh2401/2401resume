@@ -13,6 +13,11 @@ function obo_input(ele,text,callback){
         }
     },__OBO_INTERVAL);
 }
+function obo_eleInput(ele,callback){
+    var text = ele.innerHTML;
+    ele.innerHTML = "";
+    obo_input(ele,text,callback);
+}
 function next(crtIndex,ele,text)
 {
     ele.innerHTML += text[crtIndex];

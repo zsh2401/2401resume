@@ -19,7 +19,7 @@
     </head>
     <body>
         <div class="row area">
-            <div id="guiHTML" class="col-md-8" style="display: none">
+            <div id="guiHTML" class="col-md-8">
                 <div id="guiWelcome" style="display:none">
                     <h1 class="text-center">欢迎使用鸿蒙™操作系统</h1>
                     <h4 class="text-center">Welcome to HOMO OS</h4>
@@ -30,19 +30,20 @@
                 </div>
                 <div id="guiIdle" style="display: none">
                     <h3 class="text-center">请在命令行执行您需要的操作以进行显示</h3>
+                    <h3>今天天气不错</h3>
                 </div>
                 <div id="guiResume" class="row" style="padding: 0px;margin:0px;display: none">
                     <div class="col-md-4" style="padding: 0px;box-shadow: 5px 5px 5px #888888;">
                         <h3 style="color:gray;margin-left: 20px"  >Profile</h3>
-                        <div style="color:white;background-color: #00b0f0;margin: 0px;padding: 0px">
+                        <div id="head" style="color:white;display:none;background-color: #00b0f0;margin: 0px;padding: 0px">
                             <img style="padding-top: 20px" class="img-responsive" src="media/img/head.png">
-                            <h3 id="chname" style="margin-top: 10px;text-align: center">张顺泓</h3>
-                            <h5 id="enname" style="margin: 0px;text-align: center">Seymour Zhang</h5>
-                            <div style="color:#00b0f0;background-color: white;margin: 20px;text-align: center;padding: 5px; border-radius: 10px">求职开发工程师</div>
+                            <h3 id="chname" style="display: none;margin-top: 10px;text-align: center">张顺泓</h3>
+                            <h5 id="enname" style="display: none;margin: 0px;text-align: center">Seymour Zhang</h5>
+                            <div id="whatIwant" style="display: none; color:#00b0f0;background-color: white;margin: 20px;text-align: center;padding: 5px; border-radius: 10px">求职开发工程师</div>
                             <div id="splitLine1" style="margin-top: 10px; width: 100%;height:1px;background: gray"></div>
                         </div>
                         
-                        <div class="freeDiv" style="margin-top: 25px;">
+                        <div id="edu"  class="freeDiv" style="margin-top: 25px;display: none">
                             <span style="color:white;background-color: #00b0f0;padding: 10px">教 育 背 景</span>
                             <br><br>
                             <span style="background: white;color:white">x</span>
@@ -58,7 +59,7 @@
                             <span style="color:#00b0f0;">云南师范大学</span>
                         </div>
                         
-                        <div class="freeDiv" style="margin-top: 25px;">
+                        <div id="cer" class="freeDiv" style="margin-top: 25px;display: none">
                                 <span style="color:white;background-color: #00b0f0;padding: 10px">所 获 证 书</span>
                                 <br><br>
                                 <ul style="padding: 0px;padding-left: 20px;color: gray">
@@ -67,7 +68,7 @@
                                     <li>软考中级</li>
                                 </ul>
                         </div>
-                        <div class="freeDiv" style="margin-top: 25px;">
+                        <div id="contact" class="freeDiv" style="margin-top: 25px;display: none">
                                 <span style="color:white;background-color: #00b0f0;padding: 10px">联 系 方 式</span>
                                 <br><br>
                                 <div class="row" style="margin-top: 5px">

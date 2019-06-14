@@ -1,4 +1,4 @@
-var _indexofstep = 1;
+var _indexofstep = 9;
 function nextStep(){
      eval("step" + _indexofstep + "()");
      _indexofstep++;
@@ -99,19 +99,38 @@ function step8(){
     guiemu_launch(nextStep);
 }
 function step9(){
-    sysemu_inputCommand("resume head wow.png",function(){
-        $("#head").show();
+    sysemu_inputCommand("resume mode",function(){
+        sysemu_writeLine("简历模式启动");
+        $("#guiIdle").hide();
+        $("#guiResume").show();
         sysemu_finish();
         nextStep();
     });
 }
 function step10(){
-    sysemu_inputCommand("resume simple info:zsh2401",function(){
-        $("#name").show();
-        obo_input(document.getElementById("chname"),"张顺泓",()=>{
-            obo_input(document.getElementById("enname"),"Seymour Zhang",()=>{
-                sysemu_finish();
-                nextStep();
+    sysemu_inputCommand("resume profile zsh2401",function(){
+        sysemu_writeLine("正在查询zsh2401的简历信息...");
+        setTimeout(()=>{
+            sysemu_writeLine("查询完毕,姓名:张顺泓");
+            sysemu_writeLine("结果已缓存为默认设置 [OK]");
+            sysemu_finish();
+            nextStep();
+        },2000);
+    });
+}
+function step11(){
+    sysemu_inputCommand("resume display head",function(){
+        sysemu_writeLine("显示头像");
+        $("#head").show();
+        $("#chname").show();
+        obo_eleInput(document.getElementById("chname"),()=>{
+            $("#enname").show();
+            obo_eleInput(document.getElementById("enname"),()=>{
+                $("#whatIwant").show();
+                obo_eleInput(document.getElementById("whatIwant"),()=>{
+                    sysemu_finish();
+                    nextStep();
+                })
             })
         })
     });

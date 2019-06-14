@@ -15,11 +15,15 @@ function guiemu_launch(callback){
         timer_after2Sec(()=>{
             sysemu_writeLine("开始展示");
             guiLayout();
-            // guiemu_set("<p>Welcome to HOMO OS LGUI SYSTEM</p>");
-            sysemu_finish();
-            if(callback != null){
-                callback();
-            }
+            $("#guiWelcome").show();
+            setTimeout(()=>{
+                $("#guiWelcome").hide();
+                $("#guiIdle").show();
+                sysemu_finish();
+                if(callback != null){
+                    callback();
+                }
+            },7000);
         });
     });
 }
