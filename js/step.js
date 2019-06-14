@@ -1,4 +1,4 @@
-var _indexofstep = 8;
+var _indexofstep = 1;
 function nextStep(){
      eval("step" + _indexofstep + "()");
      _indexofstep++;
@@ -100,15 +100,19 @@ function step8(){
 }
 function step9(){
     sysemu_inputCommand("resume head wow.png",function(){
-        $("#head").html("<img src='https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=1999813445,981034292&fm=58&bpow=404&bpoh=600'>");
+        $("#head").show();
         sysemu_finish();
         nextStep();
     });
 }
 function step10(){
     sysemu_inputCommand("resume simple info:zsh2401",function(){
-        var dom = guiemu_getGUIDom();
-        var t = $(dom);
-        sysemu_finish();
+        $("#name").show();
+        obo_input(document.getElementById("chname"),"张顺泓",()=>{
+            obo_input(document.getElementById("enname"),"Seymour Zhang",()=>{
+                sysemu_finish();
+                nextStep();
+            })
+        })
     });
 }

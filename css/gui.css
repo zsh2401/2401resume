@@ -1,6 +1,51 @@
 #guiHTML{
     padding: 20px;
-    height: 70vw;
     background: white;
     color: black;
+}
+.hide{
+    display: none;
+}
+.freeDiv{
+    padding: 0px;
+    margin: 0px;
+}
+.skill-frame{
+    margin:20px; 
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border:1px solid #00b0f0;
+}
+.skill-name{
+    padding: 0px;
+    text-align: center;
+    background: #00b0f0;
+    color: white;
+}
+.skills-list{
+    padding-left:10px;color: gray
+}
+.split-line{
+    background: gray;
+    height:1px;
+    width:100%
+}
+.j-date{
+    color:gray;
+    margin: 2px;
+}
+.j-name{
+    color: #00b0f0;
+    margin: 2px;
+}
+.j-tip{
+    color: gray;
+    margin: 2px;
+}
+.j-frame{
+    margin-top: 10px;
+}
+.self-introduction{
+    color: gray;
+    font-size: 12px;
 }

@@ -12,7 +12,7 @@ function init(){
 }
 function start(){
     cursor_enable(document.getElementById("cursor"));
-    nextStep();
+    // nextStep();
 }
 function initVue(){
     vm = new Vue({

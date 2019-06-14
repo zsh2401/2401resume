@@ -15,7 +15,7 @@ function guiemu_launch(callback){
         timer_after2Sec(()=>{
             sysemu_writeLine("开始展示");
             guiLayout();
-            guiemu_set("<p>Welcome to HOMO OS LGUI SYSTEM</p>");
+            // guiemu_set("<p>Welcome to HOMO OS LGUI SYSTEM</p>");
             sysemu_finish();
             if(callback != null){
                 callback();
