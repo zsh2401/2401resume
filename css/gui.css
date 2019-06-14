@@ -1,7 +1,8 @@
 #guiHTML{
-    padding: 20px;
+    padding: 0px;
     background: white;
     color: black;
+    min-height: 300px;
 }
 .hide{
     display: none;

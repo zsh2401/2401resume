@@ -19,8 +19,19 @@
     </head>
     <body>
         <div class="row area">
-            <div id="guiHTML" class="col-md-8" style="padding: 0px;">
-                <div class="row" style="padding: 0px;margin:0px;">
+            <div id="guiHTML" class="col-md-8" style="display: none">
+                <div id="guiWelcome" style="display:none">
+                    <h1 class="text-center">欢迎使用鸿蒙™操作系统</h1>
+                    <h4 class="text-center">Welcome to HOMO OS</h4>
+                    <h4 class="text-center"> LGUI System™ V2.5.0.3 BETA<br><br>
+                        <progress class="text-center" max="100"></progress>
+                    </h4>
+                    <h5 class="text-center">华为技术有限公司版权所有</h5>
+                </div>
+                <div id="guiIdle" style="display: none">
+                    <h3 class="text-center">请在命令行执行您需要的操作以进行显示</h3>
+                </div>
+                <div id="guiResume" class="row" style="padding: 0px;margin:0px;display: none">
                     <div class="col-md-4" style="padding: 0px;box-shadow: 5px 5px 5px #888888;">
                         <h3 style="color:gray;margin-left: 20px"  >Profile</h3>
                         <div style="color:white;background-color: #00b0f0;margin: 0px;padding: 0px">
@@ -83,7 +94,7 @@
                       
                     </div>
                     <div class="col-md-8">
-                        <div class="freeDiv" style="height: 100px;"></div>
+                        <div class="freeDiv" style="height: 80px;"></div>
                         <h2 style="color:#00b0f0;margin-left: 20px">专业技能</h2>
                         <div class="split-line"></div>
 
@@ -145,30 +156,7 @@
                         </p>
                     </div>
                 </div>
-                <!-- <div class="row">
-                    <div id="head" class="col-md-3" >
-                        <img class="img-responsive" src="media/img/head.png">
-                    </div>
-                    <div id="name" class="col-md-9" style="color:black;margin-top: 10px">
-                        <h1 id="chname" style="margin: 0px">张顺泓</h1>
-                        <h4 id="enname" style="color: gray">Seymour Zhang</h4>
-                        <h4 id="enname" style="color: gray">Talk is cheap,show me the code</h4>
-                    </div>
-                </div>
-                <div id="splitLine1" style="margin-top: 20px; width: 100%;height:1px;background: gray"></div>
 
-                <div class="row" style="margin: 10px">
-                    <div class="col-md-4">
-                        <div style="background-color: mediumturquoise; padding:10px;color:white;text-align: center">教育背景</div>
-                        <h5 style="background: mediumturquoise;color: white;padding: 5px;text-align: center;margin-top: 10px">2020-2022</h5>
-                        <h5>云南师范大学</h5>
-                        <h5>计算机科学与技术</h5>
-                        <div id="splitLine1" style=" width: 100%;height:1px;background: gray"></div>
-                    </div>
-                    <div class="col-md-8">
-                        ss
-                    </div>
-                </div> -->
             </div>
             <div class="col-md-4" id="vueapp" >
                 <span class="partion" v-for="output in outputs" v-html="output"></span>

@@ -6,6 +6,10 @@ body{
     margin: 0px;
     color: gray;
 }
+#vueapp{
+    overflow-y:auto;
+    max-height: 500px;
+}
 .prefix{
     color: greenyellow;
 }

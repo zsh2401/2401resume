@@ -9,10 +9,13 @@ function init(){
     hljs.initHighlightingOnLoad();
     cursor_init();
     initVue();
+    setInterval(()=>{
+        scrollToEnd();
+    },100)
 }
 function start(){
     cursor_enable(document.getElementById("cursor"));
-    // nextStep();
+    nextStep();
 }
 function initVue(){
     vm = new Vue({
@@ -21,6 +24,10 @@ function initVue(){
             outputs:[],
         }
     });
+}
+function scrollToEnd(){
+    var ele = document.getElementById("vueapp");
+    ele.scrollTop = ele.scrollHeight;
 }
 function nextOutputPartion(){
     var index = vm.$data.outputs.length;
