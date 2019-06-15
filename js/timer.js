@@ -14,7 +14,7 @@ function timer_after2Sec(callback){
 function timer_afterHalfSec(callback){
     setTimeout(callback,500);
 }
-function timer_start(times,timer,finishHandler){
+function timer_start(times,timer,finishHandler,__timerInterval=__TIMER_INTERVAL){
     var index = 0;
     var interval = setInterval(()=>{
         timer(index)
@@ -25,5 +25,5 @@ function timer_start(times,timer,finishHandler){
                 finishHandler();
             }
         }
-    },__TIMER_INTERVAL);
+    },__timerInterval);
 }

@@ -32,7 +32,7 @@ function sysemu_inputCommand(text,callback){
             sysemu_write("<br>");
             callback();
         }
-    });
+    },100);
 }
 function sysemu_clear(){
     clearPartion();

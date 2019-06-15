@@ -214,3 +214,43 @@ function step18(){
             nextStep(300);
     },2000);
 }
+function step19(){
+    sysemu_inputCommand("resume display jhistory",()=>{
+        sysemu_writeLine("显示获奖历史");
+        wele_show("j-history");
+        wele_show("j-title");
+        nextStep();
+    });
+}
+function step20(){
+    wele_show("j-1");
+    wele_showInnerHTML_OBO("j-date-1");
+    wele_showInnerHTML_OBO("j-name-1");
+    wele_showInnerHTML_OBO("j-tip-1");
+    setTimeout(()=>{
+        nextStep(300);
+    },2000);
+}
+function step21(){
+    wele_show("j-2");
+    wele_showInnerHTML_OBO("j-date-2");
+    wele_showInnerHTML_OBO("j-name-2");
+    wele_showInnerHTML_OBO("j-tip-2",()=>{
+        sysemu_finish();
+        nextStep(300);
+    });
+}
+function step22(){
+    sysemu_inputCommand("resume display intr",()=>{
+        sysemu_writeLine("显示简介");
+        wele_show("introduction");
+        wele_show("introduction-title");
+        wele_showInnerHTML_OBO_ARRAY(["introduction-content-1","introduction-content-2","introduction-content-3"],()=>{
+            sysemu_finish();
+            nextStep();
+        },50);
+    });
+}
+function step23(){
+
+}
