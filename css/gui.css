@@ -2,10 +2,13 @@
     padding: 0px;
     background: black;
     color: white;
-    min-height: 300px;
     font-family: Microsoft YaHei UI;
+    padding: 0px;
 }
 #w-welcome{
+    margin: 0px;
+    padding: 0px;
+    margin-top: 0px;
     color: black;
     background: white;
     margin-left: auto;

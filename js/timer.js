@@ -27,3 +27,15 @@ function timer_start(times,timer,finishHandler,__timerInterval=__TIMER_INTERVAL)
         }
     },__timerInterval);
 }
+var _start_time =null;
+var _stop_time = null;
+function timer_start_dtimer(){
+    _start_time = new Date();
+}
+function timer_stop_dtimer(){
+     _stop_time = new Date();
+}
+function timer_get_d_millseconds()
+{
+    return _stop_time - _start_time
+}

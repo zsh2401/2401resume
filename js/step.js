@@ -19,6 +19,7 @@ function executeNextStep(){
     _indexofstep++;
 }
 function step1(){
+    timer_start_dtimer();
     sysemu_writeLineWithInterval([
         "<span style='color:orange'>Homo OS(TM)</span> is launching now...",
         "Checking disk status",
@@ -114,7 +115,6 @@ function step7(){
 function step8(){
     guiemu_launch(()=>{
         setTimeout(()=>{
-            sysemu_finish();
             nextStep();
         },3000);
     });
@@ -296,4 +296,7 @@ function step25(){
 }
 function step26(){
     wele_show("topbtns");
+    timer_stop_dtimer();
+   var ms = timer_get_d_millseconds();
+   console.log("used " + (ms/1000) +"s");
 }

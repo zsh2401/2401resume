@@ -62,11 +62,11 @@ function setGUI(html){
     $("#gui").html(html);
 }
 function guiLayout(){
-    $("#gui").show();
+    wele_show("gui");
 }
 function fullGuiLayout(){
     $("#vueapp").hide();
-    $("#gui").attr("class","col-md-12");
+    $("#w-gui").attr("class","col-md-12");
 }
 function highlightAllCode(){
     var codeBlocks = document.getElementsByTagName("code");
