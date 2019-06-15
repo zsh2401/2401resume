@@ -4,16 +4,17 @@ wele.js
 @zsh2401
 Jun 15,2019
 */
-const WELE_ATTR=  "wid";
+const WELE_PREFIX=  "w-";
 var wfsEles = {};
 function wele_init(){
     var elements = document.getElementsByTagName("*");
     for(let i =0;i<elements.length;i++){
-        var widAttr = elements[i].getAttribute(WELE_ATTR);
-        if(widAttr != null){
-            wele_set(widAttr,elements[i]);
-            wele_hide(widAttr);
-        }
+       if(elements[i].id.startsWith(WELE_PREFIX)){
+           var id = elements[i].id
+           var wid = id.slice(2,id.length);
+           wele_set(wid,elements[i]);
+        wele_hide(wid);
+       }
     }
 }
 function wele_get(id){
