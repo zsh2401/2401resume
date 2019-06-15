@@ -4,7 +4,7 @@ step.js
 @zsh2401
 Jun 15,2019
 */
-var _indexofstep = 9;
+var _indexofstep = 1;
 function nextStep(delay){
     if(delay == null || delay <0){
         executeNextStep();

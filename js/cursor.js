@@ -16,14 +16,15 @@ function cursor_do(){
     }
 }
 function cursor_switchStatus(crt){
-    if(crt.innerHTML != "_")
+    if(crt.style.visibility == "visible")
     {
-        crt.innerHTML = "_"
+        crt.style.visibility="hidden";
     }else{
-        crt.innerHTML = "";
+        crt.style.visibility="visible";
     }
 }
 function cursor_enable(cursor){
+    cursor.innerHTML = "_";
     __cursors[__cursors.length] = cursor;
 }
 function cursor_disable(cursor){
