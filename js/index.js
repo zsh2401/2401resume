@@ -5,6 +5,7 @@ index.js
 Jun 14,2019
 */
 var vm = null;
+const LAYOUT_DEBUG_MODE = true;
 function init(){
     hljs.initHighlightingOnLoad();
     cursor_init();
@@ -12,11 +13,19 @@ function init(){
     wele_init();
     setInterval(()=>{
         scrollToEnd();
-    },100)
+    },100);
+    if(LAYOUT_EDIT_MODE){
+        $("#gui").show();
+        $("#idle").show();
+        $("#welcome").show();
+        $("#resume").show();
+    }
 }
 function start(){
     cursor_enable(document.getElementById("cursor"));
-    nextStep();
+    if(!LAYOUT_EDIT_MODE){
+        nextStep();
+    }
 }
 function initVue(){
     vm = new Vue({
@@ -44,10 +53,10 @@ function clearPartion(){
     vm.$data.outputs = [];
 }
 function setGUI(html){
-    $("#guiHTML").html(html);
+    $("#gui").html(html);
 }
 function guiLayout(){
-    $("#guiHTML").show();
+    $("#gui").show();
 }
 function highlightAllCode(){
     var codeBlocks = document.getElementsByTagName("code");

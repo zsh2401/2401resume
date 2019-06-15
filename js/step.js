@@ -4,7 +4,7 @@ step.js
 @zsh2401
 Jun 15,2019
 */
-var _indexofstep = 1;
+var _indexofstep = FIRST_STEP;
 function nextStep(delay){
     if(delay == null || delay <0){
         executeNextStep();
@@ -116,8 +116,8 @@ function step8(){
 function step9(){
     sysemu_inputCommand("resume mode",function(){
         sysemu_writeLine("简历模式启动");
-        $("#guiIdle").hide();
-        $("#guiResume").show();
+        $("#idle").hide();
+        $("#resume").show();
         sysemu_finish();
         nextStep();
     });
@@ -172,7 +172,7 @@ function step14(){
     sysemu_inputCommand("resume display contact",()=>{
         sysemu_writeLine("显示联系信息");
         wele_show("contact");
-        wele_showInnerHTML_OBO_ARRAY(["contact-tel","contact-mail","contact-qq","contact-wechat","contact-website"],()=>{
+        wele_showInnerHTML_OBO_ARRAY(["contact-title","contact-tel","contact-mail","contact-qq","contact-wechat","contact-website"],()=>{
             sysemu_finish();
             nextStep();
         });

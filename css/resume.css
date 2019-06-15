@@ -4,6 +4,177 @@ resume.css
 @zsh2401
 Jun 15,2019
 */
-#resume{
-
+#resume
+{
+    padding: 0px;
+    margin:0px;
+    font-family: Microsoft YaHei UI;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    background: white;
 }
+#resume #left {
+    padding: 0px;box-shadow: 0px -1px 5px #888888;
+}
+#resume ul
+{
+    color: gray;
+    padding: 0px;
+    padding-left: 20px;
+}
+
+/* 头像 */
+#w-head{
+    color:white;
+    background-color: #00b0f0;
+    margin: 0px;
+    padding: 0px;
+    padding-bottom: 20px;
+}
+#w-head #w-cname{
+    margin-top: 10px;
+    text-align: center
+}
+#w-head #w-ename{
+    margin: 0px;
+    text-align: center
+}
+#w-head #w-want{
+    color:#00b0f0;
+    background-color: white;
+    margin: 20px;
+    text-align: center;
+    padding: 5px; 
+    border-radius: 10px;
+}
+/* 头像 */
+
+/* 教育信息 */
+#w-edu{
+    margin: 0px;
+    padding: 0px;
+    margin-top: 25px; 
+}
+#w-edu #w-edu-title{
+    color:white;background-color: #00b0f0;padding: 10px;
+}
+#w-edu .block{
+    background: #00b0f0;
+    color:#00b0f0
+}
+#w-edu .space{
+    background: white;
+    color:white
+}
+#w-edu #w-edu-period{}
+#w-edu #w-edu-pro{}
+#w-edu #w-edu-where{
+    color: #00b0f0;
+}
+/* 教育信息 */
+
+
+/* 证书信息 */
+#w-cer{
+    margin: 0px;
+    padding: 0px;
+    margin-top: 25px; 
+}
+#w-cer #w-cer-title{
+    color:white;background-color: #00b0f0;padding: 10px;
+}
+#w-cer #w-cer-ncre3{}
+#w-cer #w-cer-cet4{}
+#w-cer #w-cer-rkm{}
+/* 证书信息 */
+
+/* 联系方式 */
+#w-contact{
+    margin: 0px;
+    padding: 0px;
+    margin-top: 25px; 
+}
+#w-contact-title{
+    color:white;background-color: #00b0f0;padding: 10px;
+}
+
+#w-contact .contact-icon{
+    float:left;
+    height:20px;
+    padding: 0px;
+    margin: 0px
+}
+#w-contact .contact-div{
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+#w-contact .contact-info{
+    margin-left: 30px;
+    float:left;
+    color: gray;
+    padding: 0px;
+    margin: 0px
+}
+/* 联系方式 */
+
+/* 技能 */
+#w-skills .skill-title{
+    background: #00b0f0;
+    text-align: center;
+    color: white;
+}
+#w-skills #w-skills-title{
+    color:#00b0f0;
+    margin-left: 20px
+}
+#w-skills .skill-frame{
+    margin:20px; 
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border:1px solid #00b0f0;
+}
+#w-skills .skill-name{
+    padding: 0px;
+    text-align: center;
+    background: #00b0f0;
+    color: white;
+}
+#w-skills .skills-list{
+    padding-left:10px;color: gray
+}
+/* 技能 */
+
+/* 获奖历史 */
+#w-j-history{}
+#w-j-history #w-j-title{
+    color:#00b0f0;
+    margin-left: 20px
+}
+#w-j-history .j-date{
+    color:gray;
+    margin: 2px;
+}
+#w-j-history .j-name{
+    color: #00b0f0;
+    margin: 2px;
+}
+#w-j-history .j-tip{
+    color: gray;
+    margin: 2px;
+}
+#w-j-history .j-frame{
+    margin-top: 10px;
+}
+/* 获奖历史 */
+
+/* 简介 */
+#w-introduction{}
+#w-introduction #w-introduction-title{
+    color:#00b0f0;margin-left: 20px
+}
+#w-introduction .introduction-text{
+    color: gray;
+    font-size: 12px;
+}
+/* 简介 */

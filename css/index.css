@@ -8,7 +8,7 @@ body{
 }
 #vueapp{
     overflow-y:auto;
-    max-height: 500px;
+    max-height: 700px;
 }
 .prefix{
     color: greenyellow;

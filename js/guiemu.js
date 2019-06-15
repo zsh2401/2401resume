@@ -4,7 +4,6 @@ guiemu.js
 @zsh2401
 Jun 14,2019
 */
-var _setter = null;
 function guiemu_launch(callback){
     sysemu_writeLine("分割式图形界面启动中...");
     sysemu_writeLine("初始化模拟GPU驱动");
@@ -15,10 +14,10 @@ function guiemu_launch(callback){
         timer_after2Sec(()=>{
             sysemu_writeLine("开始展示");
             guiLayout();
-            $("#guiWelcome").show();
+            $("#welcome").show();
             setTimeout(()=>{
-                $("#guiWelcome").hide();
-                $("#guiIdle").show();
+                $("#welcome").hide();
+                $("#idle").show();
                 sysemu_finish();
                 if(callback != null){
                     callback();
@@ -32,5 +31,5 @@ function guiemu_set(content)
     setGUI(content);
 }
 function guiemu_getGUIDom(){
-    return document.getElementById("guiHTML");
+    return document.getElementById("gui");
 }

@@ -4,9 +4,12 @@ wele.js
 @zsh2401
 Jun 15,2019
 */
-const WELE_PREFIX=  "w-";
+const WELE_PREFIX=  STR_WELE_PREFIX;
 var wfsEles = {};
 function wele_init(){
+    if(LAYOUT_EDIT_MODE){
+        return;
+    }
     var elements = document.getElementsByTagName("*");
     for(let i =0;i<elements.length;i++){
        if(elements[i].id.startsWith(WELE_PREFIX)){

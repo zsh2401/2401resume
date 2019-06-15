@@ -10,6 +10,7 @@
         <script src="lib/highlight/highlight.pack.js"></script>
         <script src="lib/bootstrap/js/bootstrap.min.js"></script>
         <script src="lib/vue/js/vue.min.js"></script>
+        <script src="js/def.js"></script>
         <script src="js/cursor.js"></script>
         <script src="js/onebyone.js"></script>
         <script src="js/sysemu.js"></script>
@@ -21,8 +22,9 @@
     </head>
     <body>
         <div class="row area">
-            <div id="guiHTML" class="col-md-8" style="display:none">
-                <div id="guiWelcome" style="display:none">
+            <div id="gui" class="col-md-8" style="display:none">
+
+                <div id="welcome" style="display:none">
                     <h1 class="text-center">欢迎使用鸿蒙™操作系统</h1>
                     <h4 class="text-center">Welcome to HOMO OS</h4>
                     <h4 class="text-center"> LGUI System™ V2.5.0.3 BETA<br><br>
@@ -30,39 +32,41 @@
                     </h4>
                     <h5 class="text-center">华为技术有限公司版权所有</h5>
                 </div>
-                <div id="guiIdle" style="display: none">
+
+                <div id="idle" style="display:none">
                     <h3 class="text-center">请在命令行执行您需要的操作以进行显示</h3>
-                    <h3>今天天气不错</h3>
+                    <h3 class="text-center">今天天气不错</h3>
                 </div>
-                <div id="guiResume" class="row" style="padding: 0px;margin:0px;display: none">
-                    <div class="col-md-4" style="padding: 0px;box-shadow: 0px -1px 5px #888888;">
+
+                <div id="resume" class="row" style="display:none">
+                    <div id="left" class="col-md-4">
                         <h3 style="color:gray;margin-left: 20px"  >Profile</h3>
                         
-                        <div id="w-head" style="color:white;background-color: #00b0f0;margin: 0px;padding: 0px;padding-bottom: 20px">
+                        <div id="w-head">
                             <img style="padding-top: 20px" class="img-responsive" src="media/img/head.png">
-                            <h3 id="w-cname" style="margin-top: 10px;text-align: center">张顺泓</h3>
-                            <h5 id="w-ename" style="margin: 0px;text-align: center">Seymour Zhang</h5>
-                            <div id="w-want"  style="color:#00b0f0;background-color: white;margin: 20px;text-align: center;padding: 5px; border-radius: 10px;">求职开发工程师</div>
+                            <h3 id="w-cname">张顺泓</h3>
+                            <h5 id="w-ename">Seymour Zhang</h5>
+                            <div id="w-want">求职开发工程师</div>
                         </div>
                         
-                        <div id="w-edu"  class="freeDiv" style="margin-top: 25px;">
-                            <span id="w-edu-title" style="color:white;background-color: #00b0f0;padding: 10px">教 育 背 景</span>
+                        <div id="w-edu">
+                            <span id="w-edu-title">教 育 背 景</span>
                             <br><br>
-                            <span style="background: white;color:white">x</span>
-                            <span style="background: #00b0f0;color:#00b0f0">|</span>
+                            <span class="space">x</span>
+                            <span class="block">|</span>
                             <span id="w-edu-period">2020-2022</span>
                             <br>
-                            <span style="background: white;color:white">x</span>
-                            <span style="background: white;color:white">|</span>
+                            <span class="space">x</span>
+                            <span class="space">|</span>
                             <span id="w-edu-pro">计算机科学与技术</span>
                             <br>
-                            <span style="background: white;color:white">x</span>
-                            <span style="background: white;color:white">|</span>
-                            <span id="w-edu-where" class="theme-text">云南师范大学</span>
+                            <span class="space">x</span>
+                            <span class="space">|</span>
+                            <span id="w-edu-where">云南师范大学</span>
                         </div>
                         
-                        <div id="w-cer" class="freeDiv" style="margin-top: 25px">
-                                <span id="w-cer-title" style="color:white;background-color: #00b0f0;padding: 10px;">所 获 证 书</span>
+                        <div id="w-cer">
+                                <span id="w-cer-title">所 获 证 书</span>
                                 <br><br>
                                 <ul>
                                     <li id="w-cer-ncre3">计算机三级</li>
@@ -70,8 +74,8 @@
                                     <li id="w-cer-rkm">软考中级</li>
                                 </ul>
                         </div>
-                        <div id="w-contact" class="freeDiv" style="margin-top: 25px">
-                                <span style="color:white;background-color: #00b0f0;padding: 10px">联 系 方 式</span>
+                        <div id="w-contact">
+                                <span id="w-contact-title">联 系 方 式</span>
                                 <br><br>
                                 <div class="contact-div">
                                     <img class="contact-icon" src="media/img/phone.png">
@@ -92,14 +96,14 @@
                                 <div class="contact-div">
                                     <img class="contact-icon" src="media/img/website.png">
                                     <div id="w-contact-website" class="contact-info">zsh2401.top</div><br>
-                            </div>
+                                </div>
                         </div>
                       
                     </div>
                     <div class="col-md-8">
                         <div class="freeDiv" style="height: 80px;"></div>
                         <div id="w-skills">
-                            <h2 id="w-skills-title" class="wfs" style="color:#00b0f0;margin-left: 20px">专业技能</h2>
+                            <h2 id="w-skills-title">专业技能</h2>
                             <div class="split-line"></div>
     
                             <div id="w-skill-csharp" class="row skill-frame"> 
@@ -135,7 +139,7 @@
                         
 
                         <div id="w-j-history">
-                                <h2 id="w-j-title" style="color:#00b0f0;margin-left: 20px">获奖经历</h2>
+                                <h2 id="w-j-title">获奖经历</h2>
                                 <div class="split-line"></div>
                                 <ul>
                                     <li id="w-j-1" class="j-frame">
@@ -156,19 +160,18 @@
                         </div>
                         
                         <div id="w-introduction">
-                                <h2 id="w-introduction-title" style="color:#00b0f0;margin-left: 20px">个人简介</h2>
+                                <h2 id="w-introduction-title">个人简介</h2>
                                 <div class="split-line"></div>
-                                <span>&nbsp;&nbsp;</span><span id="w-introduction-content-1" class="self-introduction">
+                                <span>&nbsp;&nbsp;</span><span id="w-introduction-content-1" class="introduction-text">
                                     热爱编程,喜欢钻研计算机技术,并在开发自己的小项目时获得了较强的项目实战经验。
                                 </span>                         <br>          
-                                <span>&nbsp;&nbsp;</span><span id="w-introduction-content-2" class="self-introduction">
+                                <span>&nbsp;&nbsp;</span><span id="w-introduction-content-2" class="introduction-text">
                                     乐于与团队进行技术交流，善于处理人际关系，懂得与团队分工合作，高效创造收益。
                                 </span>     <br>   
-                                <span>&nbsp;&nbsp;</span><span id="w-introduction-content-3" class="self-introduction">
+                                <span>&nbsp;&nbsp;</span><span id="w-introduction-content-3" class="introduction-text">
                                     目前的IT市场趋近饱和，而新技术不断诞生，本人乐于接受新技术，保证自己的价值，具有较强竞争意识。
                                 </span><br>   
                         </div>
-                        
                     </div>
                 </div>
 
