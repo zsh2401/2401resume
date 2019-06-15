@@ -1,7 +1,22 @@
+/*
+step.js
+调用其它函数库,一步步完成所有效果
+@zsh2401
+Jun 15,2019
+*/
 var _indexofstep = 9;
-function nextStep(){
-     eval("step" + _indexofstep + "()");
-     _indexofstep++;
+function nextStep(delay){
+    if(delay == null || delay <0){
+        executeNextStep();
+    }else{
+        setTimeout(()=>{
+            executeNextStep();
+        },delay)
+    }
+}
+function executeNextStep(){
+    eval("step" + _indexofstep + "()");
+    _indexofstep++;
 }
 function step1(){
     sysemu_writeLineWithInterval([
@@ -121,17 +136,81 @@ function step10(){
 function step11(){
     sysemu_inputCommand("resume display head",function(){
         sysemu_writeLine("显示头像");
-        $("#head").show();
-        $("#chname").show();
-        obo_eleInput(document.getElementById("chname"),()=>{
-            $("#enname").show();
-            obo_eleInput(document.getElementById("enname"),()=>{
-                $("#whatIwant").show();
-                obo_eleInput(document.getElementById("whatIwant"),()=>{
-                    sysemu_finish();
-                    nextStep();
-                })
-            })
-        })
+        wele_show("head");
+        wele_showInnerHTML_OBO_ARRAY(["cname","ename","want"],()=>{
+            sysemu_finish();
+            nextStep(500);
+        });
     });
+}
+function step12(){
+    sysemu_inputCommand("resume display edu",function(){
+        sysemu_writeLine("显示教育信息");
+        timer_after1Sec(()=>{
+            wele_show("edu");
+            wele_showInnerHTML_OBO_ARRAY(["edu-title","edu-period","edu-pro","edu-where"],()=>{
+                sysemu_finish();
+                nextStep(500);
+            });
+        });
+    });
+}
+function step13()
+{
+    sysemu_inputCommand("resume display cer",function(){
+        sysemu_writeLine("显示获奖情况");
+        timer_after1Sec(()=>{
+            wele_show("cer");
+            wele_showInnerHTML_OBO_ARRAY(["cer-title","cer-ncre3","cer-cet4","cer-rkm"],()=>{
+                sysemu_finish();
+                nextStep(500);
+            });
+        });
+    });
+}
+function step14(){
+    sysemu_inputCommand("resume display contact",()=>{
+        sysemu_writeLine("显示联系信息");
+        wele_show("contact");
+        wele_showInnerHTML_OBO_ARRAY(["contact-tel","contact-mail","contact-qq","contact-wechat","contact-website"],()=>{
+            sysemu_finish();
+            nextStep();
+        });
+    });
+}
+function step15(){
+    sysemu_inputCommand("resume display skills",()=>{
+        sysemu_writeLine("显示技能信息");
+        wele_show("skills");
+        wele_show("skills-title");
+        nextStep();
+    });
+}
+function step16(){
+    wele_show("skill-csharp");
+        wele_showInnerHTML_OBO("skill-csharp-title");
+        wele_showInnerHTML_OBO("skill-csharp-1");
+        wele_showInnerHTML_OBO("skill-csharp-2");
+        setTimeout(()=>{
+            nextStep(300);
+    },2000);
+}
+function step17(){
+    wele_show("skill-java");
+        wele_showInnerHTML_OBO("skill-java-title");
+        wele_showInnerHTML_OBO("skill-java-1");
+        wele_showInnerHTML_OBO("skill-java-2");
+        setTimeout(()=>{
+            nextStep(300);
+    },2000);
+}
+function step18(){
+    wele_show("skill-web");
+        wele_showInnerHTML_OBO("skill-web-title");
+        wele_showInnerHTML_OBO("skill-web-1");
+        wele_showInnerHTML_OBO("skill-web-2");
+        setTimeout(()=>{
+            sysemu_finish();
+            nextStep(300);
+    },2000);
 }

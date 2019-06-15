@@ -1,3 +1,0 @@
-function indexctrl_init(){
-    
-}

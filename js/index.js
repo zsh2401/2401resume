@@ -1,5 +1,5 @@
 /*
-cursor.js
+index.js
 提供与index主页控件直接相关的js方法以及引导等
 @zsh2401
 Jun 14,2019
@@ -9,6 +9,7 @@ function init(){
     hljs.initHighlightingOnLoad();
     cursor_init();
     initVue();
+    wele_init();
     setInterval(()=>{
         scrollToEnd();
     },100)

@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/index.css">
         <link rel="stylesheet" href="css/gui.css">
+        <link rel="stylesheet" href="css/resume.css">
         <script src="lib/jquery/js/jquery-3.3.1.min.js"></script>
         <script src="lib/highlight/highlight.pack.js"></script>
         <script src="lib/bootstrap/js/bootstrap.min.js"></script>
@@ -15,6 +16,7 @@
         <script src="js/guiemu.js"></script>
         <script src="js/step.js"></script>
         <script src="js/timer.js"></script>
+        <script src="js/wele.js"></script>
         <script src="js/index.js"></script>
     </head>
     <body>
@@ -33,120 +35,126 @@
                     <h3>今天天气不错</h3>
                 </div>
                 <div id="guiResume" class="row" style="padding: 0px;margin:0px;display: none">
-                    <div class="col-md-4" style="padding: 0px;box-shadow: 5px 5px 5px #888888;">
+                    <div class="col-md-4" style="padding: 0px;box-shadow: 0px -1px 5px #888888;">
                         <h3 style="color:gray;margin-left: 20px"  >Profile</h3>
-                        <div id="head" style="color:white;display:none;background-color: #00b0f0;margin: 0px;padding: 0px">
+                        
+                        <div wid="head" style="color:white;background-color: #00b0f0;margin: 0px;padding: 0px;padding-bottom: 20px">
                             <img style="padding-top: 20px" class="img-responsive" src="media/img/head.png">
-                            <h3 id="chname" style="display: none;margin-top: 10px;text-align: center">张顺泓</h3>
-                            <h5 id="enname" style="display: none;margin: 0px;text-align: center">Seymour Zhang</h5>
-                            <div id="whatIwant" style="display: none; color:#00b0f0;background-color: white;margin: 20px;text-align: center;padding: 5px; border-radius: 10px">求职开发工程师</div>
-                            <div id="splitLine1" style="margin-top: 10px; width: 100%;height:1px;background: gray"></div>
+                            <h3 wid="cname" style="margin-top: 10px;text-align: center">张顺泓</h3>
+                            <h5 wid="ename" style="margin: 0px;text-align: center">Seymour Zhang</h5>
+                            <div wid="want"  style="color:#00b0f0;background-color: white;margin: 20px;text-align: center;padding: 5px; border-radius: 10px;">求职开发工程师</div>
                         </div>
                         
-                        <div id="edu"  class="freeDiv" style="margin-top: 25px;display: none">
-                            <span style="color:white;background-color: #00b0f0;padding: 10px">教 育 背 景</span>
+                        <div wid="edu"  class="freeDiv" style="margin-top: 25px;">
+                            <span wid="edu-title" style="color:white;background-color: #00b0f0;padding: 10px">教 育 背 景</span>
                             <br><br>
                             <span style="background: white;color:white">x</span>
                             <span style="background: #00b0f0;color:#00b0f0">|</span>
-                            <span>2020-2022</span>
+                            <span wid="edu-period">2020-2022</span>
                             <br>
                             <span style="background: white;color:white">x</span>
                             <span style="background: white;color:white">|</span>
-                            <span>计算机科学与技术</span>
+                            <span wid="edu-pro">计算机科学与技术</span>
                             <br>
                             <span style="background: white;color:white">x</span>
                             <span style="background: white;color:white">|</span>
-                            <span style="color:#00b0f0;">云南师范大学</span>
+                            <span wid="edu-where" class="theme-text">云南师范大学</span>
                         </div>
                         
-                        <div id="cer" class="freeDiv" style="margin-top: 25px;display: none">
-                                <span style="color:white;background-color: #00b0f0;padding: 10px">所 获 证 书</span>
+                        <div wid="cer" class="freeDiv" style="margin-top: 25px">
+                                <span wid="cer-title" style="color:white;background-color: #00b0f0;padding: 10px;">所 获 证 书</span>
                                 <br><br>
-                                <ul style="padding: 0px;padding-left: 20px;color: gray">
-                                    <li>计算机三级</li>
-                                    <li>CET4</li>
-                                    <li>软考中级</li>
+                                <ul>
+                                    <li wid="cer-ncre3">计算机三级</li>
+                                    <li wid="cer-cet4">CET4</li>
+                                    <li wid="cer-rkm">软考中级</li>
                                 </ul>
                         </div>
-                        <div id="contact" class="freeDiv" style="margin-top: 25px;display: none">
+                        <div wid="contact" class="freeDiv" style="margin-top: 25px">
                                 <span style="color:white;background-color: #00b0f0;padding: 10px">联 系 方 式</span>
                                 <br><br>
-                                <div class="row" style="margin-top: 5px">
-                                    <img class="col-md-3 img-responsive" style="margin: 0px;" src="media/img/phone.png">
-                                    <div class="col-md-9" style="color: gray;padding: 0px;margin: 0px;">18687312401</div>
+                                <div class="contact-div">
+                                    <img class="contact-icon" src="media/img/phone.png">
+                                    <div wid="contact-tel" class="contact-info">18687312401</div><br>
                                 </div>
-                                <div class="row" style="margin-top: 5px">
-                                    <img class="col-md-3 img-responsive" style="margin: 0px;" src="media/img/email.png">
-                                    <div class="col-md-9" style="color: gray;padding: 0px;margin: 0px;">zsh2401@163.com</div>
+                                <div class="contact-div">
+                                    <img class="contact-icon" src="media/img/email.png">
+                                    <div wid="contact-mail" class="contact-info">zsh2401@163.com</div><br>
                                 </div>
-                                <div class="row" style="margin-top: 5px">
-                                    <img class="col-md-3 img-responsive" style="margin: 0px;" src="media/img/qq.png">
-                                    <div class="col-md-9" style="color: gray;padding: 0px;margin: 0px;">zsh2401@163.com</div>
+                                <div class="contact-div">
+                                    <img class="contact-icon" src="media/img/qq.png">
+                                    <div wid="contact-qq" class="contact-info">zsh2401@163.com</div><br>
                                 </div>
-                                <div class="row" style="margin-top: 5px">
-                                    <img class="col-md-3 img-responsive" style="margin: 0px;" src="media/img/wechat.png">
-                                    <div class="col-md-9" style="color: gray;padding: 0px;margin: 0px;">ryme2401</div>
+                                <div class="contact-div">
+                                    <img class="contact-icon" src="media/img/wechat.png">
+                                    <div wid="contact-wechat" class="contact-info">ryme2401</div><br>
                                 </div>
-                                <div class="row" style="margin-top: 5px">
-                                    <img class="col-md-3 img-responsive" style="margin: 0px;" src="media/img/website.png">
-                                    <div class="col-md-9" style="color: gray;padding: 0px;margin: 0px;">zsh2401.top</div>
+                                <div class="contact-div">
+                                    <img class="contact-icon" src="media/img/website.png">
+                                    <div wid="contact-website" class="contact-info">zsh2401.top</div><br>
                             </div>
                         </div>
                       
                     </div>
                     <div class="col-md-8">
                         <div class="freeDiv" style="height: 80px;"></div>
-                        <h2 style="color:#00b0f0;margin-left: 20px">专业技能</h2>
-                        <div class="split-line"></div>
-
-                        <div class="row skill-frame"> 
-                            <div class="col-md-2 skill-name">C#</div>
-                            <div class="col-md-10">
-                                <ul class="skills-list">
-                                    <li>具备完善的.NET C#开发知识</li>
-                                    <li>熟悉ASP与WPF开发</li>
-                                </ul>
+                        <div wid="skills">
+                            <h2 wid="skills-title" class="wfs" style="color:#00b0f0;margin-left: 20px">专业技能</h2>
+                            <div class="split-line"></div>
+    
+                            <div wid="skill-csharp" class="row skill-frame"> 
+                                    <div wid="skill-csharp-title" class="col-md-2 skill-title">C#</div>
+                                    <div class="col-md-10">
+                                        <ul class="skills-list">
+                                            <li wid="skill-csharp-1">具备完善的.NET C#开发知识</li>
+                                            <li wid="skill-csharp-2">熟悉ASP与WPF开发</li>
+                                        </ul>
+                                    </div>
                             </div>
-                        </div>
-
-                         <div class="row skill-frame"> 
-                            <div class="col-md-2 skill-name">Java</div>
-                            <div class="col-md-10">
-                                <ul class="skills-list">
-                                    <li>具备完善的.NET C#开发知识</li>
-                                    <li>熟悉ASP与WPF开发</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="row skill-frame"> 
-                                <div class="col-md-2 skill-name">前端</div>
+    
+                             <div wid="skill-java" class="row skill-frame"> 
+                                <div wid="skill-java-title" class="col-md-2 skill-title">Java</div>
                                 <div class="col-md-10">
-                                    <ul class="skills-list">
-                                        <li>熟悉前端技术与框架</li>
-                                        <li>可以开发现代H5网站</li>
+                                    <ul>
+                                        <li wid="skill-java-1">熟悉Java WEB</li>
+                                        <li wid="skill-java-2">熟悉SSH等主流开发框架</li>
                                     </ul>
                                 </div>
+                            </div>
+    
+                            <div wid="skill-web" class="row skill-frame"> 
+                                    <div wid="skill-web-title" class="col-md-2 skill-title">前端</div>
+                                    <div class="col-md-10">
+                                        <ul>
+                                            <li wid="skill-web-1">熟悉前端技术与框架</li>
+                                            <li wid="skill-web-2">可以开发现代H5网站</li>
+                                        </ul>
+                                    </div>
+                            </div>
                         </div>
+                        
 
-                        <h2 style="color:#00b0f0;margin-left: 20px">获奖经历</h2>
-                        <div class="split-line"></div>
-                        <ul>
-                            <li class="j-frame">
-                                <div>
-                                    <h5 class="j-date">2019.5</h5>
-                                    <h4 class="j-name">云南省大学生计算机设计大赛一等奖</h4>
-                                    <p class="j-tip">使用多种技术,开发开源软件秋之盒,并以此作品参加云南省大学生计算机设计大赛,代表学校获得二等奖</p>
-                                </div>
-                            </li>
-                            <li class="j-frame">
-                                <div>
-                                    <h5 class="j-date">2019.4</h5>
-                                    <h4 class="j-name">云南省高职英语口语大赛三等奖</h4>
-                                    <p class="j-tip">平日努力学习英语,并在老师指导下参加此次大赛,代表学校获得三等奖</p>
-                                </div>
-                            </li>
-                        </ul>
+                        <div wid="j-history">
+                                <h2 style="color:#00b0f0;margin-left: 20px">获奖经历</h2>
+                                <div class="split-line"></div>
+                                <ul>
+                                    <li wid="j-1" class="j-frame">
+                                        <div>
+                                            <h5 wid="j-date-1"  class="j-date">2019.5</h5>
+                                            <h4 wid="j-name-1" class="j-name">云南省大学生计算机设计大赛一等奖</h4>
+                                            <p wid="j-tip-1" class="j-tip">使用多种技术,开发开源软件秋之盒,并以此作品参加云南省大学生计算机设计大赛,代表学校获得二等奖</p>
+                                        </div>
+                                    </li>
+                                    <li wid="j-2" class="j-frame">
+                                        <div>
+                                            <h5 wid="j-date-2" class="j-date">2019.4</h5>
+                                            <h4 wid="j-name-2"  class="j-name">云南省高职英语口语大赛三等奖</h4>
+                                            <p wid="j-tip-2" class="j-tip">平日努力学习英语,并在老师指导下参加此次大赛,代表学校获得三等奖</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                        </div>
+                        
                         
                         <h2 style="color:#00b0f0;margin-left: 20px">个人简介</h2>
                         <div class="split-line"></div>

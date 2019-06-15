@@ -1,3 +1,9 @@
+/*
+sysemu.js
+用于模拟标准输出输入命令行
+@zsh2401
+Jun 14,2019
+*/
 var __INPUT_INTERVAL = 200;
 var sources = [];
 function sysemu_writeLine(text){

@@ -1,3 +1,9 @@
+/*
+onebyone.js
+用于实现逐个输入,其它代码中的OBO也正是代表的one by one逐个输入
+@zsh2401
+Jun 14,2019
+*/
 
 var __OBO_INTERVAL = 100;
 function obo_input(ele,text,callback){
