@@ -1,21 +1,28 @@
-#gui{
+#w-gui{
     padding: 0px;
     background: black;
     color: white;
     min-height: 300px;
+    font-family: Microsoft YaHei UI;
 }
-#welcome{
+#w-welcome{
     color: black;
     background: white;
     margin-left: auto;
     margin-right: auto;
 }
-#idle{
+#w-idle{
     color: black;
     background: white;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: gray;
+    font-size: 20px;
+    text-align: center;
 }
+
 .split-line{
     background: gray;
     height:1px;

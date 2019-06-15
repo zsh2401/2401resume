@@ -98,7 +98,8 @@ function step7(){
             sysemu_finish();
             setTimeout(()=>{
                 sysemu_inputCommand("gui launch",function(){
-                    sysemu_writeLine("不支持完整gui模式,请尝试<span style='color:green'>lgui launch</span>");
+                    sysemu_writeLine("<span class='warning'>不支持完整gui模式</span>");
+                    sysemu_writeLine("请尝试<span style='color:green'>lgui launch</span>");
                     sysemu_finish();
                     setTimeout(()=>{
                         sysemu_inputCommand("lgui launch",function(){
@@ -111,15 +112,25 @@ function step7(){
     },2000);
 }
 function step8(){
-    guiemu_launch(nextStep);
+    guiemu_launch(()=>{
+        setTimeout(()=>{
+            sysemu_finish();
+            nextStep();
+        },3000);
+    });
 }
 function step9(){
     sysemu_inputCommand("resume mode",function(){
-        sysemu_writeLine("简历模式启动");
-        $("#idle").hide();
-        $("#resume").show();
-        sysemu_finish();
-        nextStep();
+        sysemu_writeLine("<span class='sender'>[LGUI]</span>:正在切换到简历模式");
+        sysemu_writeLine("<span class='sender'>[Resume Generator]</span>: 简历生成器V2.3启动");
+        setTimeout(()=>{
+            sysemu_writeLine("进入简历编辑模式");
+            wele_hide("idle");
+            wele_show("resume");
+            wele_show("details");
+            sysemu_finish();
+            nextStep(1000);
+        },2000);
     });
 }
 function step10(){
@@ -130,7 +141,7 @@ function step10(){
             sysemu_writeLine("结果已缓存为默认设置 [OK]");
             sysemu_finish();
             nextStep();
-        },2000);
+        },2500);
     });
 }
 function step11(){
@@ -163,7 +174,7 @@ function step13()
             wele_show("cer");
             wele_showInnerHTML_OBO_ARRAY(["cer-title","cer-ncre3","cer-cet4","cer-rkm"],()=>{
                 sysemu_finish();
-                nextStep(500);
+                nextStep(1500);
             });
         });
     });
@@ -172,18 +183,20 @@ function step14(){
     sysemu_inputCommand("resume display contact",()=>{
         sysemu_writeLine("显示联系信息");
         wele_show("contact");
+        pageScrollToEnd();
         wele_showInnerHTML_OBO_ARRAY(["contact-title","contact-tel","contact-mail","contact-qq","contact-wechat","contact-website"],()=>{
             sysemu_finish();
-            nextStep();
+            nextStep(1500);
         });
     });
 }
 function step15(){
     sysemu_inputCommand("resume display skills",()=>{
         sysemu_writeLine("显示技能信息");
+        pageScrollToTop();
         wele_show("skills");
         wele_show("skills-title");
-        nextStep();
+        nextStep(1500);
     });
 }
 function step16(){
@@ -192,7 +205,7 @@ function step16(){
         wele_showInnerHTML_OBO("skill-csharp-1");
         wele_showInnerHTML_OBO("skill-csharp-2");
         setTimeout(()=>{
-            nextStep(300);
+            nextStep(1500);
     },2000);
 }
 function step17(){
@@ -219,7 +232,7 @@ function step19(){
         sysemu_writeLine("显示获奖历史");
         wele_show("j-history");
         wele_show("j-title");
-        nextStep();
+        nextStep(2000);
     });
 }
 function step20(){
@@ -228,7 +241,7 @@ function step20(){
     wele_showInnerHTML_OBO("j-name-1");
     wele_showInnerHTML_OBO("j-tip-1");
     setTimeout(()=>{
-        nextStep(300);
+        nextStep(2000);
     },2000);
 }
 function step21(){
@@ -237,7 +250,7 @@ function step21(){
     wele_showInnerHTML_OBO("j-name-2");
     wele_showInnerHTML_OBO("j-tip-2",()=>{
         sysemu_finish();
-        nextStep(300);
+        nextStep(2000);
     });
 }
 function step22(){
@@ -245,12 +258,42 @@ function step22(){
         sysemu_writeLine("显示简介");
         wele_show("introduction");
         wele_show("introduction-title");
+        pageScrollToEnd();
         wele_showInnerHTML_OBO_ARRAY(["introduction-content-1","introduction-content-2","introduction-content-3"],()=>{
             sysemu_finish();
-            nextStep();
+            nextStep(2000);
         },50);
     });
 }
+function step24(){
+    sysemu_inputCommand("resume display cover",()=>{
+        sysemu_writeLine("显示封面");
+        wele_show("cover");
+        pageScrollToTop();
+        sysemu_finish();
+        nextStep(2000);
+    });
+}
 function step23(){
-
+    sysemu_inputCommand("resume display letter",()=>{
+        sysemu_writeLine("显示自荐信");
+        wele_show("self-recommendation");
+        pageScrollToEnd();
+        sysemu_finish();
+        nextStep(2000);
+    });
+}
+function step25(){
+    sysemu_inputCommand("resume fullscreen",()=>{
+        sysemu_writeLine("全面展示..");
+        sysemu_writeLine("加载中");
+        sysemu_writeLine("再见!太阳系");
+        setTimeout(()=>{
+            fullGuiLayout();
+            nextStep(2000);
+        },2000);
+    }); 
+}
+function step26(){
+    wele_show("topbtns");
 }

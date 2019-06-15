@@ -1,4 +1,4 @@
-const LAYOUT_EDIT_MODE = true;
+const LAYOUT_EDIT_MODE = false;
 const FIRST_STEP = 1;
 const ELE_GUI ="gui";
 const ELE_IDLE ="idle";

@@ -35,6 +35,12 @@ function initVue(){
         }
     });
 }
+function pageScrollToEnd(){
+    $('body').animate( {scrollTop: $(document).height()}, 500);
+}
+function pageScrollToTop(){
+    $('body').animate( {scrollTop: 0}, 500);
+}
 function scrollToEnd(){
     var ele = document.getElementById("vueapp");
     ele.scrollTop = ele.scrollHeight;
@@ -57,6 +63,10 @@ function setGUI(html){
 }
 function guiLayout(){
     $("#gui").show();
+}
+function fullGuiLayout(){
+    $("#vueapp").hide();
+    $("#gui").attr("class","col-md-12");
 }
 function highlightAllCode(){
     var codeBlocks = document.getElementsByTagName("code");

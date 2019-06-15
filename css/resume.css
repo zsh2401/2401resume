@@ -4,7 +4,7 @@ resume.css
 @zsh2401
 Jun 15,2019
 */
-#resume
+#w-resume
 {
     padding: 0px;
     margin:0px;
@@ -12,14 +12,70 @@ Jun 15,2019
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
-    background: white;
+    background: gray;
+    color: rgb(181, 181, 181);
 }
-#resume #left {
+#w-resume #w-cover
+{
+    text-align: center;
+    background: white;
+    color: black;
+    margin: 0px;
+    margin-top:20px;
+    margin-bottom:20px;
+    height: 850px;
+}
+#w-resume #w-cover #head
+{
+    font-family: Candara Light;
+    text-align: center;
+    font-size: 50px;
+    background: #00b0f0;
+    color: white;
+    padding: 20px;
+}
+#w-resume #w-cover #icon
+{
+    padding-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#w-resume #w-cover #name
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+#w-resume #w-cover #title
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+#w-resume #w-cover #skills
+{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 70px;
+    color: #00b0f0;
+    margin-left: auto;
+    margin-right: auto;
+}
+#w-resume #w-cover #bottom
+{
+    padding-bottom: 40px;
+}
+
+#w-resume #w-details{
+    padding: 0px;
+    margin: 0px;
+    font-family: Microsoft YaHei UI;
+    background-color: white;
+    height: 850px;
+}
+#w-resume #w-details #left {
     padding: 0px;box-shadow: 0px -1px 5px #888888;
 }
-#resume ul
+#w-resume ul
 {
-    color: gray;
     padding: 0px;
     padding-left: 20px;
 }
@@ -67,8 +123,10 @@ Jun 15,2019
     background: white;
     color:white
 }
-#w-edu #w-edu-period{}
-#w-edu #w-edu-pro{}
+#w-edu #w-edu-period{
+}
+#w-edu #w-edu-pro{
+}
 #w-edu #w-edu-where{
     color: #00b0f0;
 }
@@ -112,7 +170,6 @@ Jun 15,2019
 #w-contact .contact-info{
     margin-left: 30px;
     float:left;
-    color: gray;
     padding: 0px;
     margin: 0px
 }
@@ -160,7 +217,7 @@ Jun 15,2019
     margin: 2px;
 }
 #w-j-history .j-tip{
-    color: gray;
+    /* color: gray; */
     margin: 2px;
 }
 #w-j-history .j-frame{
@@ -169,7 +226,9 @@ Jun 15,2019
 /* 获奖历史 */
 
 /* 简介 */
-#w-introduction{}
+#w-introduction{
+    font-size: 20px;
+}
 #w-introduction #w-introduction-title{
     color:#00b0f0;margin-left: 20px
 }
@@ -178,3 +237,30 @@ Jun 15,2019
     font-size: 12px;
 }
 /* 简介 */
+
+#w-self-recommendation{
+    margin: 0px;
+    margin-top:20px;
+    margin-bottom:20px;
+    height: 850px;
+    padding-top: 50px;
+    background: white;
+    color: black;
+}
+#w-self-recommendation #white{
+    text-align: center;
+}
+#w-self-recommendation #title{
+   text-align: center;
+   margin-bottom: 60px;
+  
+}
+#w-self-recommendation #content{
+   font-size: 14;
+   margin: 40px;
+}
+#w-self-recommendation #last{
+    margin: 40px;
+    margin-top: 100px;
+    text-align: right;
+}

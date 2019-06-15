@@ -1,0 +1,35 @@
+.outputLine{
+    margin: 0px;
+    color: gray;
+}
+#vueapp{
+    max-height: 500px;
+    overflow-y: scroll;
+    z-index:9999;
+    right: 20px;
+    top: 130px;
+    position: fixed;
+    width: 400px;
+}
+#vueapp .warning{
+    color: red;
+}
+#vueapp .ok{
+    color:green;
+}
+#vueapp .prefix{
+    color: greenyellow;
+}
+#vueapp .inputing{
+    color: white;
+}
+#vueapp .partion{
+    margin: 0;
+    color: white;
+}
+#vueapp .sender{
+    color: aquamarine;
+}
+#vueapp #cursor{
+    color: whitesmoke;
+}

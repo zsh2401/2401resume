@@ -1,0 +1,232 @@
+<html>
+    <head>
+        <title>张顺泓-全栈工程师</title>
+        <link rel="stylesheet" href="lib/highlight/styles/a11y-dark.css">
+        <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/gui.css">
+        <link rel="stylesheet" href="css/outputarea.css">
+        <link rel="stylesheet" href="css/resume.css">
+        <script src="lib/jquery/js/jquery-3.3.1.min.js"></script>
+        <script src="lib/highlight/highlight.pack.js"></script>
+        <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+        <script src="lib/vue/js/vue.min.js"></script>
+        <script src="js/def.js"></script>
+        <script src="js/cursor.js"></script>
+        <script src="js/onebyone.js"></script>
+        <script src="js/sysemu.js"></script>
+        <script src="js/guiemu.js"></script>
+        <script src="js/step.js"></script>
+        <script src="js/timer.js"></script>
+        <script src="js/wele.js"></script>
+        <script src="js/index.js"></script>
+    </head>
+    <body>
+        <audio id="bgaudio"  controls></audio>
+        <div class="row area">
+            <div id="gui" class="col-md-8" style="display:none">
+
+                <div id="w-welcome" wns>
+                    <h1 class="text-center">欢迎使用鸿蒙™操作系统</h1>
+                    <h4 class="text-center">Welcome to HOMO OS</h4>
+                    <h4 class="text-center"> LGUI System™ V2.5.0.3 BETA<br><br>
+                        <progress class="text-center" max="100"></progress>
+                    </h4>
+                    <h5 class="text-center">华为技术有限公司版权所有</h5>
+                </div>
+
+                <div id="w-idle" wns>
+                    <img src="media/img/idlebackground.jpg" class="img-responsive" style="margin-left: auto;margin-right: auto;">
+                    <p>[请在命令行执行您需要的操作以进行显示]</p>
+                </div>
+
+                <div id="w-resume" wns>
+                    <h5 id="w-topbtns" wns class="text-center"><br>
+                        <button class="btn btn-success" onclick="window.open('media/2401-resume.pdf')">下载PDF版本</button><br>
+                    </h5>
+                    
+                    <div id="w-cover" wns>
+                        <div id="head">
+                            <i> Change is good</i>
+                        </div>
+                        <img id="icon"class="img-responsive" src="media/img/head.png">
+                        <h1 id="name">张顺泓<small>Seymour Zhang</small></h1>
+                        <h1 id="title"><small>Resume</small>简历</h1>
+                        <h1 id="skills"><b><i>Java,WEB,C#</i></b></h1>
+                        <div id="bottom" class="row">
+                            <img class="img-responsive col-md-4" src="media/img/java.png">
+                            <img class="img-responsive col-md-4" src="media/img/h5.png">
+                            <img class="img-responsive col-md-4" src="media/img/web.png">
+                        </div>
+                    </div>
+
+                    <div id="w-details" class="row">
+                        <div id="left" class="col-md-4">
+                            <h3 style="color:gray;margin-left: 20px"  >Profile</h3>
+                            
+                            <div id="w-head">
+                                <img style="padding-top: 20px" class="img-responsive" src="media/img/head.png">
+                                <h3 id="w-cname">张顺泓</h3>
+                                <h5 id="w-ename">Seymour Zhang</h5>
+                                <div id="w-want">求职开发工程师</div>
+                            </div>
+                            
+                            <div id="w-edu">
+                                <span id="w-edu-title">教 育 背 景</span>
+                                <br><br>
+                                <span class="space">x</span>
+                                <span class="block">|</span>
+                                <span id="w-edu-period">2020-2022</span>
+                                <br>
+                                <span class="space">x</span>
+                                <span class="space">|</span>
+                                <span id="w-edu-pro">计算机科学与技术</span>
+                                <br>
+                                <span class="space">x</span>
+                                <span class="space">|</span>
+                                <span id="w-edu-where">云南师范大学</span>
+                            </div>
+                            
+                            <div id="w-cer">
+                                    <span id="w-cer-title">所 获 证 书</span>
+                                    <br><br>
+                                    <ul>
+                                        <li id="w-cer-ncre3">计算机三级</li>
+                                        <li id="w-cer-cet4">CET4</li>
+                                        <li id="w-cer-rkm">软考中级</li>
+                                    </ul>
+                            </div>
+                            <div id="w-contact">
+                                    <span id="w-contact-title">联 系 方 式</span>
+                                    <br><br>
+                                    <div class="contact-div">
+                                        <img class="contact-icon" src="media/img/phone.png">
+                                        <div id="w-contact-tel" class="contact-info">18687312401</div><br>
+                                    </div>
+                                    <div class="contact-div">
+                                        <img class="contact-icon" src="media/img/email.png">
+                                        <div id="w-contact-mail" class="contact-info">zsh2401@163.com</div><br>
+                                    </div>
+                                    <div class="contact-div">
+                                        <img class="contact-icon" src="media/img/qq.png">
+                                        <div id="w-contact-qq" class="contact-info">zsh2401@163.com</div><br>
+                                    </div>
+                                    <div class="contact-div">
+                                        <img class="contact-icon" src="media/img/wechat.png">
+                                        <div id="w-contact-wechat" class="contact-info">ryme2401</div><br>
+                                    </div>
+                                    <div class="contact-div">
+                                        <img class="contact-icon" src="media/img/website.png">
+                                        <div id="w-contact-website" class="contact-info">zsh2401.top</div><br>
+                                    </div>
+                            </div>
+                        
+                        </div>
+                        <div class="col-md-8">
+                            <div class="freeDiv" style="height: 80px;"></div>
+                            <div id="w-skills">
+                                <h2 id="w-skills-title">专业技能</h2>
+                                <div class="split-line"></div>
+        
+                                <div id="w-skill-csharp" class="row skill-frame"> 
+                                        <div id="w-skill-csharp-title" class="col-md-2 skill-title">C#</div>
+                                        <div class="col-md-10">
+                                            <ul>
+                                                <li id="w-skill-csharp-1">具备完善的.NET C#开发知识</li>
+                                                <li id="w-skill-csharp-2">熟悉ASP与WPF开发</li>
+                                            </ul>
+                                        </div>
+                                </div>
+        
+                                <div id="w-skill-java" class="row skill-frame"> 
+                                    <div id="w-skill-java-title" class="col-md-2 skill-title">Java</div>
+                                    <div class="col-md-10">
+                                        <ul>
+                                            <li id="w-skill-java-1">熟悉Java WEB</li>
+                                            <li id="w-skill-java-2">熟悉SSH等主流开发框架</li>
+                                        </ul>
+                                    </div>
+                                </div>
+        
+                                <div id="w-skill-web" class="row skill-frame"> 
+                                        <div id="w-skill-web-title" class="col-md-2 skill-title">前端</div>
+                                        <div class="col-md-10">
+                                            <ul>
+                                                <li id="w-skill-web-1">熟悉前端技术与框架</li>
+                                                <li id="w-skill-web-2">可以开发现代H5网站</li>
+                                            </ul>
+                                        </div>
+                                </div>
+                            </div>
+                            
+
+                            <div id="w-j-history">
+                                    <h2 id="w-j-title">获奖经历</h2>
+                                    <div class="split-line"></div>
+                                    <ul>
+                                        <li id="w-j-1" class="j-frame">
+                                            <div>
+                                                <h5 id="w-j-date-1"  class="j-date">2019.5</h5>
+                                                <h4 id="w-j-name-1" class="j-name">云南省大学生计算机设计大赛一等奖</h4>
+                                                <p id="w-j-tip-1" class="j-tip">使用多种技术,开发开源软件秋之盒,并以此作品参加云南省大学生计算机设计大赛,代表学校获得二等奖</p>
+                                            </div>
+                                        </li>
+                                        <li id="w-j-2" class="j-frame">
+                                            <div>
+                                                <h5 id="w-j-date-2" class="j-date">2019.4</h5>
+                                                <h4 id="w-j-name-2"  class="j-name">云南省高职英语口语大赛三等奖</h4>
+                                                <p id="w-j-tip-2" class="j-tip">平日努力学习英语,并在老师指导下参加此次大赛,代表学校获得三等奖</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                            </div>
+                            
+                            <div id="w-introduction">
+                                    <h2 id="w-introduction-title">个人简介</h2>
+                                    <div class="split-line"></div>
+                                    <span>&nbsp;&nbsp;</span><span id="w-introduction-content-1" class="introduction-text">
+                                        热爱编程,喜欢钻研计算机技术,并在开发自己的小项目时获得了较强的项目实战经验。
+                                    </span>                         <br>          
+                                    <span>&nbsp;&nbsp;</span><span id="w-introduction-content-2" class="introduction-text">
+                                        乐于与团队进行技术交流，善于处理人际关系，懂得与团队分工合作，高效创造收益。
+                                    </span>     <br>   
+                                    <span>&nbsp;&nbsp;</span><span id="w-introduction-content-3" class="introduction-text">
+                                        目前的IT市场趋近饱和，而新技术不断诞生，本人乐于接受新技术，保证自己的价值，具有较强竞争意识。
+                                    </span><br>   
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="w-self-recommendation" wns>
+                        <h1 id="title">自荐信</h1>
+                            <p id="content">尊敬的领导:<br>
+                                &nbsp;&nbsp;您好！<br>
+                                &nbsp;&nbsp;我是云南师范大学2022届的计算机科学专业学生,在校期间勤奋刻苦,除在本专业取得优异成绩以外,还热爱科学,英语等方面的知识。<br>
+                                &nbsp;&nbsp;我在2015年-2020年间于昆明工业职业技术学院就读。这期间,我重新审视自己,发愤图强,努力学习,开发了“秋之盒”开源项目，参与云南职业学院英语比赛以及中国大学生计算机大赛云南赛区比赛，并于2020年通过专升本考试进入云南师范大学计算机科学专业就读。<br>
+                                &nbsp;&nbsp;在五年的高等教育生涯里，我有2/3的科目处于优等成绩，不断报名各种考试，计算机方面获得了计算机等级四级以及软考中级证书,英语方面获得了CET4证书。<br>
+                                &nbsp;&nbsp;我热爱编程，在代码的世界里掌控一切是我的爱好之一，我一直在不断学习，提高自己的知识水平与素养。<br>
+                                &nbsp;&nbsp;如果贵司能够将聘用我，我定会继续努力工作与学习，不断提升自己对于公司的作用，尽最大努力完成公司派发的任务。希望贵司能给我一个机会。<br>
+                                <br>
+                                <br>  
+                                &nbsp;&nbsp;&nbsp;&nbsp;此致<br>
+                                &nbsp;&nbsp;敬礼!
+                            </p>
+                            <p id="last">
+                                    自荐人:张顺泓<br>
+                                    2022年3月5日
+                            </p>
+                    </div>
+            </div>
+
+            </div>
+            <div class="col-md-4" >
+                
+            </div>
+            <div id="vueapp">
+                    <span class="partion" v-for="output in outputs" v-html="output"></span>
+                    <span id="cursor"></span>      
+            </div>
+        </div>
+
+    </body>
+</html>

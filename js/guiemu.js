@@ -14,10 +14,11 @@ function guiemu_launch(callback){
         timer_after2Sec(()=>{
             sysemu_writeLine("开始展示");
             guiLayout();
-            $("#welcome").show();
+            wele_show("welcome");
             setTimeout(()=>{
-                $("#welcome").hide();
-                $("#idle").show();
+                wele_hide("welcome");
+                wele_show("idle");
+                sysemu_writeLine("LGUI System™启动完成,您现在可以操作LGUI了");
                 sysemu_finish();
                 if(callback != null){
                     callback();

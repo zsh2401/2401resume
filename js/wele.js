@@ -7,16 +7,16 @@ Jun 15,2019
 const WELE_PREFIX=  STR_WELE_PREFIX;
 var wfsEles = {};
 function wele_init(){
-    if(LAYOUT_EDIT_MODE){
-        return;
-    }
+
     var elements = document.getElementsByTagName("*");
     for(let i =0;i<elements.length;i++){
        if(elements[i].id.startsWith(WELE_PREFIX)){
            var id = elements[i].id
            var wid = id.slice(2,id.length);
-           wele_set(wid,elements[i]);
-        wele_hide(wid);
+            wele_set(wid,elements[i]);
+            if(!LAYOUT_EDIT_MODE){
+                wele_hide(wid);
+            }
        }
     }
 }
@@ -27,10 +27,25 @@ function wele_set(id,ele){
     wfsEles[id] = ele;
 }
 function wele_show(id){
-    wele_get(id).style.visibility="visible";
+    var ele = wele_get(id);
+    var wns = ele.getAttribute("wns");
+    if(wns == null)
+    {
+        ele.style.visibility="visible";
+    }else{
+        $(ele).show();
+    }
+    
 }
 function wele_hide(id){
-    wele_get(id).style.visibility="hidden";
+    var ele = wele_get(id);
+    var wns = ele.getAttribute("wns");
+    if(wns == null)
+    {
+        ele.style.visibility="hidden";
+    }else{
+        $(ele).hide();
+    }
 }
 function wele_getJQuery(id){
     return $(wele_get());

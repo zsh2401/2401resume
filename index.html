@@ -1,186 +1,28 @@
 <html>
     <head>
-        <title>张顺泓-全栈工程师</title>
-        <link rel="stylesheet" href="lib/highlight/styles/a11y-dark.css">
         <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/index.css">
-        <link rel="stylesheet" href="css/gui.css">
-        <link rel="stylesheet" href="css/resume.css">
         <script src="lib/jquery/js/jquery-3.3.1.min.js"></script>
-        <script src="lib/highlight/highlight.pack.js"></script>
         <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-        <script src="lib/vue/js/vue.min.js"></script>
-        <script src="js/def.js"></script>
-        <script src="js/cursor.js"></script>
-        <script src="js/onebyone.js"></script>
-        <script src="js/sysemu.js"></script>
-        <script src="js/guiemu.js"></script>
-        <script src="js/step.js"></script>
-        <script src="js/timer.js"></script>
-        <script src="js/wele.js"></script>
-        <script src="js/index.js"></script>
     </head>
+    <script>
+        
+    </script>
     <body>
-        <div class="row area">
-            <div id="gui" class="col-md-8" style="display:none">
-
-                <div id="welcome" style="display:none">
-                    <h1 class="text-center">欢迎使用鸿蒙™操作系统</h1>
-                    <h4 class="text-center">Welcome to HOMO OS</h4>
-                    <h4 class="text-center"> LGUI System™ V2.5.0.3 BETA<br><br>
-                        <progress class="text-center" max="100"></progress>
-                    </h4>
-                    <h5 class="text-center">华为技术有限公司版权所有</h5>
-                </div>
-
-                <div id="idle" style="display:none">
-                    <h3 class="text-center">请在命令行执行您需要的操作以进行显示</h3>
-                    <h3 class="text-center">今天天气不错</h3>
-                </div>
-
-                <div id="resume" class="row" style="display:none">
-                    <div id="left" class="col-md-4">
-                        <h3 style="color:gray;margin-left: 20px"  >Profile</h3>
-                        
-                        <div id="w-head">
-                            <img style="padding-top: 20px" class="img-responsive" src="media/img/head.png">
-                            <h3 id="w-cname">张顺泓</h3>
-                            <h5 id="w-ename">Seymour Zhang</h5>
-                            <div id="w-want">求职开发工程师</div>
-                        </div>
-                        
-                        <div id="w-edu">
-                            <span id="w-edu-title">教 育 背 景</span>
-                            <br><br>
-                            <span class="space">x</span>
-                            <span class="block">|</span>
-                            <span id="w-edu-period">2020-2022</span>
-                            <br>
-                            <span class="space">x</span>
-                            <span class="space">|</span>
-                            <span id="w-edu-pro">计算机科学与技术</span>
-                            <br>
-                            <span class="space">x</span>
-                            <span class="space">|</span>
-                            <span id="w-edu-where">云南师范大学</span>
-                        </div>
-                        
-                        <div id="w-cer">
-                                <span id="w-cer-title">所 获 证 书</span>
-                                <br><br>
-                                <ul>
-                                    <li id="w-cer-ncre3">计算机三级</li>
-                                    <li id="w-cer-cet4">CET4</li>
-                                    <li id="w-cer-rkm">软考中级</li>
-                                </ul>
-                        </div>
-                        <div id="w-contact">
-                                <span id="w-contact-title">联 系 方 式</span>
-                                <br><br>
-                                <div class="contact-div">
-                                    <img class="contact-icon" src="media/img/phone.png">
-                                    <div id="w-contact-tel" class="contact-info">18687312401</div><br>
-                                </div>
-                                <div class="contact-div">
-                                    <img class="contact-icon" src="media/img/email.png">
-                                    <div id="w-contact-mail" class="contact-info">zsh2401@163.com</div><br>
-                                </div>
-                                <div class="contact-div">
-                                    <img class="contact-icon" src="media/img/qq.png">
-                                    <div id="w-contact-qq" class="contact-info">zsh2401@163.com</div><br>
-                                </div>
-                                <div class="contact-div">
-                                    <img class="contact-icon" src="media/img/wechat.png">
-                                    <div id="w-contact-wechat" class="contact-info">ryme2401</div><br>
-                                </div>
-                                <div class="contact-div">
-                                    <img class="contact-icon" src="media/img/website.png">
-                                    <div id="w-contact-website" class="contact-info">zsh2401.top</div><br>
-                                </div>
-                        </div>
-                      
-                    </div>
-                    <div class="col-md-8">
-                        <div class="freeDiv" style="height: 80px;"></div>
-                        <div id="w-skills">
-                            <h2 id="w-skills-title">专业技能</h2>
-                            <div class="split-line"></div>
-    
-                            <div id="w-skill-csharp" class="row skill-frame"> 
-                                    <div id="w-skill-csharp-title" class="col-md-2 skill-title">C#</div>
-                                    <div class="col-md-10">
-                                        <ul class="skills-list">
-                                            <li id="w-skill-csharp-1">具备完善的.NET C#开发知识</li>
-                                            <li id="w-skill-csharp-2">熟悉ASP与WPF开发</li>
-                                        </ul>
-                                    </div>
-                            </div>
-    
-                             <div id="w-skill-java" class="row skill-frame"> 
-                                <div id="w-skill-java-title" class="col-md-2 skill-title">Java</div>
-                                <div class="col-md-10">
-                                    <ul>
-                                        <li id="w-skill-java-1">熟悉Java WEB</li>
-                                        <li id="w-skill-java-2">熟悉SSH等主流开发框架</li>
-                                    </ul>
-                                </div>
-                            </div>
-    
-                            <div id="w-skill-web" class="row skill-frame"> 
-                                    <div id="w-skill-web-title" class="col-md-2 skill-title">前端</div>
-                                    <div class="col-md-10">
-                                        <ul>
-                                            <li id="w-skill-web-1">熟悉前端技术与框架</li>
-                                            <li id="w-skill-web-2">可以开发现代H5网站</li>
-                                        </ul>
-                                    </div>
-                            </div>
-                        </div>
-                        
-
-                        <div id="w-j-history">
-                                <h2 id="w-j-title">获奖经历</h2>
-                                <div class="split-line"></div>
-                                <ul>
-                                    <li id="w-j-1" class="j-frame">
-                                        <div>
-                                            <h5 id="w-j-date-1"  class="j-date">2019.5</h5>
-                                            <h4 id="w-j-name-1" class="j-name">云南省大学生计算机设计大赛一等奖</h4>
-                                            <p id="w-j-tip-1" class="j-tip">使用多种技术,开发开源软件秋之盒,并以此作品参加云南省大学生计算机设计大赛,代表学校获得二等奖</p>
-                                        </div>
-                                    </li>
-                                    <li id="w-j-2" class="j-frame">
-                                        <div>
-                                            <h5 id="w-j-date-2" class="j-date">2019.4</h5>
-                                            <h4 id="w-j-name-2"  class="j-name">云南省高职英语口语大赛三等奖</h4>
-                                            <p id="w-j-tip-2" class="j-tip">平日努力学习英语,并在老师指导下参加此次大赛,代表学校获得三等奖</p>
-                                        </div>
-                                    </li>
-                                </ul>
-                        </div>
-                        
-                        <div id="w-introduction">
-                                <h2 id="w-introduction-title">个人简介</h2>
-                                <div class="split-line"></div>
-                                <span>&nbsp;&nbsp;</span><span id="w-introduction-content-1" class="introduction-text">
-                                    热爱编程,喜欢钻研计算机技术,并在开发自己的小项目时获得了较强的项目实战经验。
-                                </span>                         <br>          
-                                <span>&nbsp;&nbsp;</span><span id="w-introduction-content-2" class="introduction-text">
-                                    乐于与团队进行技术交流，善于处理人际关系，懂得与团队分工合作，高效创造收益。
-                                </span>     <br>   
-                                <span>&nbsp;&nbsp;</span><span id="w-introduction-content-3" class="introduction-text">
-                                    目前的IT市场趋近饱和，而新技术不断诞生，本人乐于接受新技术，保证自己的价值，具有较强竞争意识。
-                                </span><br>   
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-md-4" id="vueapp" >
-                <span class="partion" v-for="output in outputs" v-html="output"></span>
-                <span id="cursor"></span>      
-            </div>
+        <div class="container">
+            <h1 class="text-center">作品说明</h1>
+            <h4 class="text-center">作者: Saymour Zhang</h4>
+            <h4 class="text-center">电子邮件: zsh2401@163.com</h4>
+            <h4 class="text-center">制作日期: June 15,2019</h4>
+            <h4 class="text-center">代码创作相关: 除lib文件夹下的第三方库,其余代码均为作者本人自行设计编写!</h4>
+            <br><br>
+            <h3 class="text-center">本作品未进行完善的兼容性测试,因此请尽可能满足以下条件再进行浏览</h3>
+            <h4 class="text-center">平台 PC<span style="color:red">  必要</span> </h4>
+            <h4 class="text-center">浏览器 Chrome<span style="color:red">  必要</span> </h4>
+            <h4 class="text-center">操作系统 Windows10<span style="color:orange">  非必要</span> </h4>
+            <br><br>
+            <h4 class="text-center">准备好了吗?</h4>
+            <h4 class="text-center"><a class="text-center" href="content.html">立刻浏览!</a></h4>
+            
         </div>
-
     </body>
 </html>

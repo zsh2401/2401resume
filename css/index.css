@@ -2,31 +2,21 @@ body{
     background: black;
     color: gray;
 }
-.outputLine{
-    margin: 0px;
-    color: gray;
-}
-#vueapp{
-    overflow-y:auto;
-    max-height: 700px;
-}
-.prefix{
-    color: greenyellow;
-}
-.inputing{
-    color: white;
-}
-.partion{
-    margin: 0;
-    color: white;
-}
-#cursor{
-    color: whitesmoke;
-}
 .area
 {
     margin-left: auto;
     margin-right: auto;
     width: 80%;
     background: transparent;
+}
+#bgaudio{
+    right:10px;
+    top: 10px;
+    position: fixed;
+    z-index: 9999;
+}
+#w-topbtns{
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
 }
