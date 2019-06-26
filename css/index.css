@@ -3,6 +3,7 @@
 }
 body{
     background: black;
+    background-size: cover;
     color: gray;
 }
 .area

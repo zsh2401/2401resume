@@ -284,17 +284,23 @@ function step23(){
     });
 }
 function step25(){
-    sysemu_inputCommand("resume fullscreen",()=>{
-        sysemu_writeLine("全面展示..");
-        sysemu_writeLine("加载中");
-        sysemu_writeLine("再见!太阳系");
-        setTimeout(()=>{
-            fullGuiLayout();
-            nextStep(2000);
-        },2000);
+    sysemu_inputCommand("lgui setbg ./media/img/bg.jpg",()=>{
+        sysemu_writeLine("设置背景.....");
+        document.body.style.background = "url(\'./media/img/bg.jpg\')";
+        document.body.style.backgroundSize = "cover";
+        nextStep(3000);
     }); 
 }
 function step26(){
+    sysemu_inputCommand("resume fullscreen",()=>{
+        sysemu_writeLine("全面展示..");
+        sysemu_writeLine("加载中");
+        sysemu_writeLine("<h1><i>再见!太阳系<i></h1>");
+        nextStep(4500);
+    }); 
+}
+function step27(){
+    fullGuiLayout();
     wele_show("topbtns");
     timer_stop_dtimer();
    var ms = timer_get_d_millseconds();
