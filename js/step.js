@@ -294,17 +294,18 @@ function step25(){
     }); 
 }
 function step26(){
+    sysemu_finish();
     sysemu_inputCommand("resume fullscreen",()=>{
         sysemu_writeLine("全面展示..");
         sysemu_writeLine("加载中");
-        sysemu_writeLine("<h1><i>再见!太阳系<i></h1>");
+        sysemu_writeLine("<h1><i>\"再见!太阳系\"<i></h1>");
+        wele_show("dlbtn");
         nextStep(4500);
     }); 
 }
 function step27(){
     fullGuiLayout();
-    wele_show("topbtns");
     timer_stop_dtimer();
-   var ms = timer_get_d_millseconds();
-   console.log("used " + (ms/1000) +"s");
+    var ms = timer_get_d_millseconds();
+    console.log("used " + (ms/1000) +"s");
 }

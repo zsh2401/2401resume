@@ -1,7 +1,7 @@
 #w-gui{
     padding: 0px;
     background: transparent;
-    color: white;
+    color: black;
     font-family: Microsoft YaHei UI;
     padding: 0px;
 }
@@ -21,7 +21,6 @@
     margin-right: auto;
     padding-top: 20px;
     padding-bottom: 20px;
-    color: gray;
     font-size: 20px;
     text-align: center;
 }

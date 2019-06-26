@@ -23,7 +23,14 @@
         <script src="js/index.js"></script>
     </head>
     <body>
-        <audio id="bgaudio" src="media/audio/Daniel Pemberton - 1998. The New Mac.mp3" style="width:250px;" autoplay loop controls></audio>
+        <div id="right-top">
+            <audio id="bgmusic"  src="media/audio/Daniel Pemberton - 1998. The New Mac.mp3" style="width:250px;" autoplay loop controls></audio>
+            <br>
+            <h5 class="text-center">
+                <button id="w-dlbtn" wns class="btn btn-success" onclick="window.open('media/2401-resume.pdf')">下载PDF版本</button>
+            </h5>
+        </div>
+        
         <div class="row area">
             <div id="w-gui" wns class="col-md-8">
 
@@ -38,14 +45,13 @@
 
                 <div id="w-idle" wns>
                     <img src="media/img/idlebackground.jpg" class="img-responsive" style="margin-left: auto;margin-right: auto;">
+                    <br>
                     <p>[请在命令行执行您需要的操作以进行显示]</p>
                 </div>
 
                 <div id="w-resume" wns>
-                    <h5 id="w-topbtns" wns class="text-center"><br>
-                        <button class="btn btn-success" onclick="window.open('media/2401-resume.pdf')">下载PDF版本</button><br>
-                    </h5>
-                    
+                  
+
                     <div id="w-cover" wns>
                         <div id="head">
                             <i> Change is good</i>

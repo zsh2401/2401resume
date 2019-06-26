@@ -11,6 +11,7 @@ function init(){
     cursor_init();
     initVue();
     wele_init();
+    document.getElementById("bgmusic").volume = 0.35;
     setInterval(()=>{
         scrollToEnd();
     },100);
