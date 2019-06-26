@@ -6,12 +6,28 @@ Jun 14,2019
 */
 var vm = null;
 const LAYOUT_DEBUG_MODE = true;
+var bgm =null;
+function click(){
+    bgm.play();
+}
 function init(){
     hljs.initHighlightingOnLoad();
     cursor_init();
     initVue();
     wele_init();
-    document.getElementById("bgmusic").volume = 0.35;
+    wele_show("tip");
+    bgm = document.getElementById("bgmusic");
+    bgm.onplaying = ()=>{
+        wele_hide("tip");
+        cursor_enable(document.getElementById("cursor"));
+        if(!LAYOUT_EDIT_MODE){
+            nextStep();
+        }
+    }
+    bgm.volume = 0.35;
+    setTimeout(()=>{
+        bgm.play();
+    },3000);
     setInterval(()=>{
         scrollToEnd();
     },100);
@@ -20,12 +36,6 @@ function init(){
         $("#idle").show();
         $("#welcome").show();
         $("#resume").show();
-    }
-}
-function start(){
-    cursor_enable(document.getElementById("cursor"));
-    if(!LAYOUT_EDIT_MODE){
-        nextStep();
     }
 }
 function initVue(){
@@ -80,5 +90,4 @@ function drawHighlight(domEle){
 }
 window.onload = ()=>{
     init();
-    start();
 };

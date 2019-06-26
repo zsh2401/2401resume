@@ -6,7 +6,16 @@
         <script src="lib/bootstrap/js/bootstrap.min.js"></script>
     </head>
     <script>
-        
+        function onVideoCanPlay(){
+            document.getElementById("video").controls = true;
+        }
+        function onVideoPause(){
+            document.getElementById("video").controls = true;
+        }
+
+        function onVidePlaying(){
+            document.getElementById("video").controls = false;
+        }
     </script>
     <style>
         ::-webkit-scrollbar{
@@ -19,7 +28,7 @@
     </style>
     <body>
         <div class="container">
-            <video src="./media/video/gb_ss.mp4" style="width:100%" loop autoplay></video>
+            <video id="video" loop autoplay onpause="onVideoPause()" onplaying="onVidePlaying()" oncanplay="onVideoCanPlay()" src="./media/video/gb_ss.mp4" style="width:100%"></video>
             <p class="text-center">**上方视频与作品无关**</p>
             <div class="row">
                 <div class="col-md-4">
