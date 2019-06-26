@@ -287,7 +287,9 @@ function step25(){
     sysemu_inputCommand("lgui setbg ./media/img/bg.jpg",()=>{
         sysemu_writeLine("设置背景.....");
         document.body.style.background = "url(\'./media/img/bg.jpg\')";
+        document.body.style.backgroundRepeat = "no-repeat";
         document.body.style.backgroundSize = "cover";
+        document.body.style.backgroundAttachment = "fixed";
         nextStep(3000);
     }); 
 }
